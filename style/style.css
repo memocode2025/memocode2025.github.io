@@ -373,3 +373,81 @@ table tr td {
     color: #47433F;
     border-top: 1px solid #FFF;
 }
+
+
+        
+.timeline-container {
+    max-width: 700px;
+    position: relative;
+    padding: 20px;
+}
+
+.timeline-container::before {
+    content: "";
+    position: absolute;
+    left: 50%;
+    width: 3px;
+    height: 90%;
+    background: #00001d;
+    transform: translateX(-50%);
+    border-radius: 5px;
+}
+
+.timeline-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    position: relative;
+    width: 100%;
+}
+
+.timeline-item:nth-child(even) {
+    flex-direction: row-reverse;
+}
+
+.timeline-content {
+    background: rgb(211, 207, 207);
+    padding: 5px 25px;
+    width: 40%;
+    border-radius: 6px;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease-in-out;
+    position: relative;
+    z-index: 1;
+}
+
+.timeline-content:hover {
+    transform: translateY(-8px);
+}
+
+.timeline-content h3 {
+    margin: 0;
+    font-size: 1.1em;
+    color: #00001d;
+}
+
+.timeline-content p {
+    margin: 4px 0 0;
+    font-size: 0.95em;
+    color: #131212;
+}
+
+.timeline-circle {
+    width: 12px;
+    height: 12px;
+    background: #00001d;
+    border-radius: 50%;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    transition: all 0.2s ease-in-out;
+    z-index: 2;
+}
+
+.timeline-circle:hover {
+    width: 16px;
+    height: 16px;
+    background: #0056b3;
+}
