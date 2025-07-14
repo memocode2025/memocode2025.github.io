@@ -661,6 +661,189 @@
         padding: 1px 3px;
         border: 1px solid
     }
+        .keynote-speaker {
+            margin-bottom: 50px;
+            padding: 30px;
+            background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+            border-radius: 15px;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.12);
+            border: 1px solid rgba(255,255,255,0.2);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .keynote-speaker:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 35px rgba(0,0,0,0.15);
+        }
+        
+        .speaker-header {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 25px;
+            gap: 25px;
+        }
+
+        .speaker-photo {
+            flex-shrink: 0;
+            position: relative;
+        }
+
+        .speaker-photo img {
+            width: 130px;
+            height: 150px;
+            object-fit: cover;
+            object-position: center;
+            border-radius: 8px;
+            border: 4px solid #fff;
+            display: block;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+        }
+
+        .speaker-info {
+            flex: 1;
+            padding-left: 10px;
+        }
+
+        .speaker-name {
+            font-size: 20px;
+            font-weight: bold;
+            color: #2c3e50;
+            margin: 0 0 8px 0;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
+        }
+
+        .speaker-name a {
+            color: inherit;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .speaker-name a:hover {
+            color: #3498db;
+        }
+
+        .speaker-affiliation {
+            font-size: 17px;
+            color: #7f8c8d;
+            margin: 0 0 18px 0;
+            font-style: italic;
+            font-weight: 500;
+        }
+
+        .talk-title {
+            font-size: 20px;
+            font-weight: bold;
+            color: #030760;
+            margin: 0 0 15px 0;
+            line-height: 1.3;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
+        }
+
+        .section-title {
+            font-size: 18px;
+            font-weight: bold;
+            color: #2980b9;
+            margin: 20px 0 12px 0;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            position: relative;
+            padding-left: 20px;
+        }
+
+        .section-title::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 12px;
+            height: 12px;
+            background: linear-gradient(45deg, #3498db, #2ecc71);
+            border-radius: 50%;
+        }
+
+        .abstract-text, .bio-text {
+            text-align: justify;
+            line-height: 1.7;
+            color: #2c3e50;
+            font-size: 14px;
+        }
+
+        .abstract-text {
+            background: linear-gradient(135deg, #fff 0%, #f8f9fa 100%);
+            padding: 20px;
+            border-left: 5px solid #3498db;
+            margin: 10px 0;
+            border-radius: 0 8px 8px 0;
+            box-shadow: 0 2px 10px rgba(52, 152, 219, 0.1);
+        }
+
+        .bio-text {
+            background: linear-gradient(135deg, #fff 0%, #f8f9fa 100%);
+            padding: 20px;
+            border-left: 5px solid #27ae60;
+            margin: 10px 0;
+            border-radius: 0 8px 8px 0;
+            box-shadow: 0 2px 10px rgba(39, 174, 96, 0.1);
+        }
+
+        @media (max-width: 768px) {
+            .speaker-header {
+                flex-direction: column;
+                text-align: center;
+                align-items: center;
+            }
+            
+            .speaker-photo img {
+                width: 140px;
+                height: 180px;
+            }
+
+            .speaker-info {
+                padding-left: 0;
+                text-align: center;
+            }
+
+            .keynote-speaker {
+                padding: 20px;
+                margin-bottom: 30px;
+            }
+
+            .speaker-name {
+                font-size: 24px;
+            }
+
+            .talk-title {
+                font-size: 20px;
+            }
+        }
+
+
+        /* #content h1::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 100px;
+            height: 3px;
+            background: linear-gradient(90deg, #3498db, #2ecc71);
+            border-radius: 2px;
+        } */
+
+        /* Smooth scrolling for better UX */
+        html {
+            scroll-behavior: smooth;
+        }
+
+        /* Add subtle animation to images */
+        .speaker-photo img {
+            transition: transform 0.3s ease;
+        }
+
+        .keynote-speaker:hover .speaker-photo img {
+            transform: scale(1.02);
+        }
     </style>
 </head>
 
@@ -670,7 +853,6 @@
     <div id="header">
         <div id="logo">
             <div id="logo_text">
-                <!-- class="logo_colour", allows you to change the colour of the text -->
                 <h1><a href="index.html">MEMOCODE'25</a></h1>
                 <h2 style="font-size: 1.5em">23rd ACM-IEEE International Symposium on Formal Methods and Models for
                     System Design<br>
@@ -681,31 +863,17 @@
         </div>
         <div id="menubar">
             <ul id="menu">
-                <!-- put class="selected" in the li tag for the selected page - to highlight which page you're on -->
-                <li style="font-size: 1.2em"><a
-                    href="index.html">Home</a></li>
-            <li style="font-size: 1.2em"><a href="callforpapers.html">Call for Papers</a></li>
-            <!-- <li style="font-size: 1.2em"><a href="bestpapers.html">Best Paper Awards</a></li> -->
-            <li class="selected" style="font-size: 1.2em"><a href="keynotes.html">Keynotes</a></li>
-            <li style="font-size: 1.2em"><a href="program.html">Program</a></li>
-            <!-- <li style="font-size: 1.2em"><a
-                    href="registration.html">Registration</a></li> -->
-            <!-- <li style="font-size: 1.2em"><a href="venue.html">Venue</a></li> -->
+                <li style="font-size: 1.2em"><a href="index.html">Home</a></li>
+                <li style="font-size: 1.2em"><a href="callforpapers.html">Call for Papers</a></li>
+                <li class="selected" style="font-size: 1.2em"><a href="keynotes.html">Keynotes</a></li>
+                <li style="font-size: 1.2em"><a href="program.html">Program</a></li>
             </ul>
         </div>
     </div>
 
-
-    <!--------------------------------------------------------------------------------------------------------------->
-
     <div id="content_header"></div>
     <div id="site_content">
         <div id="banner"></div>
-
-        <!--------------------------------------------------------------------------------------------------------------->
-
-        <!--------------------------------------------------------------------------------------------------------------->
-
 
         <div id="sidebar_container">
             <div class="sidebar">
@@ -713,27 +881,72 @@
                     <h3>Sponsors</h3>
                     <a href="http://www.acm.org/"><img src="./images/acm.png"></a><br>
                     <a href="http://www.ieee.org/"><img src="./images/ieee.png"></a><br>
-                    <!-- &nbsp;<a href="http://ieee-ceda.org"><img src="images/ceda.png"></a><br> -->
-                    <!--    &nbsp;&nbsp;&nbsp;&nbsp;<a href="http://ieee-cas.org"><img src="images/cas.png"></a><br>
-                    &nbsp;<a href="http://www.iitk.ac.in"><img src="images/iitk.png"></a><br><br>-->
                 </div>
             </div>
         </div>
 
-               <div id="content" style="font-size: 12pt; text-align: justify;">
-                  <h1>Keynote Speakers</h1>
+        <div id="content" style="font-size: 12pt; text-align: justify;">
+            <h1>Keynote Speakers</h1>
 
-                  <ul>
-                    <li><h4><a href="https://lall.stanford.edu/">Sanjay Lall</a></h4>Stanford University</li>
-                    <li><h4><a href="https://lcs.ios.ac.cn/~znj/">Naijun Zhan</a></h4>Peking University</li>
-                </ul>
+            <!-- Sanjay Lall -->
+            <div class="keynote-speaker">
+                <div class="speaker-header">
+                    <div class="speaker-photo">
+                        <img src="./images/sanjaylall_vlo2.jpg" alt="Sanjay Lall">
+                    </div>
+                    <div class="speaker-info">
+                        <h2 class="speaker-name">
+                            <a href="https://lall.stanford.edu/" target="_blank">Sanjay Lall</a>
+                        </h2>
+                        <p class="speaker-affiliation">Stanford University</p>
+                        <h3 class="talk-title">Distributed computing on bittide systems</h3>
+                    </div>
+                </div>
+                
+                <div class="section-title">Abstract</div>
+                <div class="abstract-text">
+                    The bittide system is a recent approach to distributed computing, designed to achieve synchronous execution at a large scale without the need for a global clock or traditional wall-clock synchronization. It aims to overcome the complexity and expense of maintaining precise wall-clock time in distributed systems, especially at datacenter scale.
+                    <br><br>
+                    The underlying mechanism of bittide uses feedback control to regulate the frequency of the hardware oscillators driving both computation and communication, in such a way as to ensure that all nodes operate in syntony. This allows applications to treat time as purely logical, and to make use of deterministic scheduling and programming methodologies across the entire datacenter.
+                    <br><br>
+                    In this talk we present an overview of the bittide system, discussing how the system works, mathematical formulations of the system behavior, and the consequences of logical synchrony for applications.
+                </div>
 
+                <div class="section-title">Bio</div>
+                <div class="bio-text">
+                    Sanjay Lall is Professor of Electrical Engineering in the Information Systems Laboratory at Stanford University. He received a B.A. degree in Mathematics with first-class honors in 1990 and a Ph.D. degree in Engineering in 1995, both from the University of Cambridge, England. His research group focuses on algorithms for control, optimization, and machine learning. From 2018 to 2019 he was Director in the Autonomous Systems Group at Apple. Before joining Stanford he was a Research Fellow at the California Institute of Technology in the Department of Control and Dynamical Systems, and prior to that he was a NATO Research Fellow at Massachusetts Institute of Technology, in the Laboratory for Information and Decision Systems. He was also a visiting scholar at Lund Institute of Technology in the Department of Automatic Control. He has significant industrial experience applying advanced algorithms to problems including satellite systems, advanced audio systems, Formula 1 racing, the America's cup, cloud services monitoring, and integrated circuit diagnostic systems, in addition to several startup companies. Professor Lall has served as Associate Editor for the journal Automatica, on the steering and program committees of several international conferences, and as a reviewer for the National Science Foundation, DARPA, and the Air Force Office of Scientific Research. He is the author of over 130 peer-refereed publications. He is currently a visiting researcher and director at Google.
+                </div>
+            </div>
 
+            <!-- Naijun Zhan -->
+            <div class="keynote-speaker">
+                <div class="speaker-header">
+                    <div class="speaker-photo">
+                        <img src="./images/Naijun003.png" alt="Naijun Zhan">
+                    </div>
+                    <div class="speaker-info">
+                        <h2 class="speaker-name">
+                            <a href="https://lcs.ios.ac.cn/~znj/" target="_blank">Naijun Zhan</a>
+                        </h2>
+                        <p class="speaker-affiliation">Peking University</p>
+                        <h3 class="talk-title">Formal Design of Safety-critical Embedded Systems</h3>
+                    </div>
+                </div>
+                
+                <div class="section-title">Abstract</div>
+                <div class="abstract-text">
+                    I will report our recent work on model-based formal design of safety-critical embedded systems. With our approach, one can build a graphical model for a system to be developed with the combination of Simulink/Stateflow and AADL (AADL+S/S), and then conduct extensive simulation. Any AADL+S/S graphical model can be translated to an HCSP formal model automatically, so that the translated HCSP formal model can be verified using Hybrid Hoare Logic and its theorem prover. To justify the correctness of the translation, we define formal semantics of AADL+S/S and HCSP respectively with HUTP (Higher-order Unifying Theories of Programming), the correctness of the translation can therefore be proved theoretically. Finally, we propose the notion of approximate bisimulation for HCSP, and define a set of refinement rules through which we can refine an HCSP process into a piece of SystemC code or ANSI-C code, which is approximate bisimilar to the original HCSP process. All the above are supported by a tool chain called MARS. We applied the above approach to design some real-world case studies.
+                </div>
 
-
-
+                <div class="section-title">Bio</div>
+                <div class="bio-text">
+                    Naijun Zhan is a Boya distinguished professor in the School of Computer Science of Peking University. He got his bachelor degree and master degree both from Nanjing University, and his PhD from Institute of Software Chinese Academy of Sciences (ISCAS). Prior to join Peking University, he worked at the Faculty of Mathematics and Informatics, Mannheim University, Germany as a research fellow, and afterwards worked at ISCAS as an associate professor, a full professor, and a distinguished professor. His research interests cover formal design of real-time, embedded and hybrid systems, program verification, and so on. He is in the editorial boards of Journal of Automated Reasoning, Formal Aspects of Computing, Journal of Logical and Algebraic Methods in Programming, Journal of Software, Journal of Electronics, and Journal of Computer Research and Development and so on, a member of the steering committees of SETTA and MEMOCODE, the pc co-chairs of TACAS 2027, ICFEM 2025, FM 2021 and SETTA 2016, the general co-chairs of SETTA 2025, MEMOCODE 2019, MEMOCODE2018 and ICESS 2019, and serves more than 100 international conferences program committees e.g., CAV, RTSS, HSCC, FM, TACAS, EMSOFT and so on. He published more than 150 papers in international leading journals and conferences and 2 books, and edited 4 conference proceedings and 7 journal special issues. See lcs.ios.ac.cn/~znj for more details.
+                </div>
+            </div>
+        </div>
     </div>
 </div>
+
 <script type="text/javascript" src="./keynotes_files/MathJax.js"></script>
 <script id="texAllTheThingsPageScript" type="text/javascript"
         src="chrome-extension://cbimabofgmfdkicghcadidpemeenbffn/js/pageScript.js"
