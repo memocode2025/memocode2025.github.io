@@ -1,9 +1,3 @@
-<!DOCTYPE html>
-<!-- saved from url=(0045)https://lcs.ios.ac.cn/memocode21/program.html -->
-<html>
-<head>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-
     <title>MEMOCODE 2025</title>
     <meta name="description" content="website description">
     <meta name="keywords" content="website keywords, website keywords">
@@ -662,16 +656,91 @@
         padding: 1px 3px;
         border: 1px solid
     }
+</style>
+
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>MEMOCODE 2025</title>
+    <meta name="description" content="website description">
+    <meta name="keywords" content="website keywords, website keywords">
+
+    <link rel="stylesheet" href="./fonts/h5p-font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="./style/style.css">
+    
+    <!-- Custom Styles for Program Table -->
+    <style type="text/css">
+        .program-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 30px;
+            font-size: 0.9em;
+        }
+
+        .program-table th, .program-table td {
+            border: 1px solid #ddd;
+            padding: 10px;
+            text-align: left;
+            vertical-align: top;
+        }
+
+        .program-table .day-header {
+            background-color: #003366; /* Dark Blue */
+            color: white;
+            font-size: 1.4em;
+            text-align: center;
+            font-weight: bold;
+        }
+
+        .program-table .track-header {
+            background-color: #746969; /* Light Grey */
+            font-weight: bold;
+            text-align: center;
+        }
+        
+        .program-table .time-col {
+            width: 15%;
+            font-weight: bold;
+            white-space: nowrap;
+        }
+
+        .program-table .session-title {
+            background-color: #e6f2ff; /* Light Blue */
+            font-weight: bold;
+            text-align: center;
+        }
+
+        .program-table .break-row {
+            background-color: #f5f5f5; /* Off-white */
+            text-align: center;
+            font-style: italic;
+            font-weight: bold;
+        }
+        
+        .program-table em {
+            color: #333;
+        }
+
+        .program-table .paper-title {
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+
+        .program-table .authors {
+            font-style: italic;
+            color: #555;
+            font-size: 0.9em;
+        }
     </style>
 </head>
 
-<body data-new-gr-c-s-check-loaded="14.1052.0" data-gr-ext-installed="">
-<div id="MathJax_Message" style="display: none;"></div>
+<body>
 <div id="main">
     <div id="header">
         <div id="logo">
             <div id="logo_text">
-                <!-- class="logo_colour", allows you to change the colour of the text -->
                 <h1><a href="index.html">MEMOCODE'25</a></h1>
                 <h2 style="font-size: 1.5em">23rd ACM-IEEE International Symposium on Formal Methods and Models for
                     System Design<br>
@@ -682,21 +751,14 @@
         </div>
         <div id="menubar">
             <ul id="menu">
-                <!-- put class="selected" in the li tag for the selected page - to highlight which page you're on -->
                 <li style="font-size: 1.2em"><a href="index.html">Home</a></li>
-                <li style="font-size: 1.2em"><a href="callforpapers.html">Call for
-                    Papers</a></li>
-                <!-- <li style="font-size: 1.2em"><a href="designcontest.html">Design Contest</a></li> -->
+                <li style="font-size: 1.2em"><a href="callforpapers.html">Call for Papers</a></li>
                 <li style="font-size: 1.2em"><a href="keynotes.html">Keynotes</a></li>
                 <li style="font-size: 1.2em"><a href="acceptedpapers.html">Accepted Papers</a></li>
                 <li class="selected" style="font-size: 1.2em"><a href="program.html">Program</a></li>
-                <!-- <li style="font-size: 1.2em"><a href="registration.html">Registration</a></li> -->
-                <!-- <li style="font-size: 1.2em"><a href="venue.html">Venue</a></li> -->
             </ul>
         </div>
     </div>
-    <!--------------------------------------------------------------------------------------------------------------->
-
 
     <div id="content_header"></div>
     <div id="site_content">
@@ -707,59 +769,270 @@
                     <h3>Steering Committee</h3>
                     <ul>
                       <li>Arun Kumar <br> IIT, Delhi Naijun Zhan, Institute of Software, CAS</li>
-                      <li>Pierluigi Nuzzo<br>  University of California, Berkeley, USA</li>
+                      <li>Pierluigi Nuzzo<br> University of California, Berkeley, USA</li>
                       <li>Partha Roop<br> University of Auckland, USA</li>
                       <li>Klaus Schneider<br> TU Kaiserslautern, Germany</li>
                       <li>Jean-Pierre Talpin<br> INRIA, France</li>
-                     </ul>
+                    </ul>
                 </div>
 
                 <div id="sidebar_container">
                     <div class="sidebar">
                         <h4>MEMOCODE is sponsored by</h4>
-
                         <div class="sidebar_item">
                             <a href="http://www.acm.org/"><img src="./previous_editions_files/acm.png"></a><br>
                             <a href="http://www.ieee.org/"><img src="./previous_editions_files/ieee.png"></a><br>
-                            <!-- &nbsp;<a href="http://ieee-ceda.org"><img src="images/ceda.png"></a><br> -->
                         </div>
                     </div>
-                    <div class="sidebar">
-                        <!--  <h4>MEMOCODE'18 is supported by</h4>
-                          <div class="sidebar_item">
-                            <a href=""><img src="images/tct.png"></a><br>
-                            <a href="http://www.buaa.edu.cn"><img src="images/beihang.png"></a><br>
-                            <a href="http://english.cas.cn"><img src="images/cas.png"></a><br>
-                            &nbsp;<a href="http://www.nankai.edu.cn/"><img src="images/nankai.png"></a><br>
-                            </div>
-                        -->
-                    </div>
                 </div>
-
             </div>
         </div>
 
+        <div id="content">
+            <h1>Symposium Program</h1>
 
-              <div id="content">
-                  <h1>Symposium Program</h1>
-
-<pre>
-    TBD    
-
-</pre>
-
-               </div>
+            <!-- Thursday, October 2 -->
+            <table class="program-table">
+                <thead>
+                    <tr>
+                        <th colspan="5" class="day-header">Thursday, October 2</th>
+                    </tr>
+                    <tr>
+                        <th class="time-col">Time</th>
+                        <th class="track-header">101A</th>
+                        <th class="track-header">101B (RSP)</th>
+                        <th class="track-header">101C (TCRS)</th>
+                        <th class="track-header">101D (MSC)</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="time-col">09:00 - 09:15</td>
+                        <td colspan="4" class="session-title">Opening remarks<br><em>by Prof. Nan Guan, City University of Hong Kong</em></td>
+                    </tr>
+                    <tr>
+                        <td class="time-col">09:20 - 10:20</td>
+                        <td colspan="4" class="session-title"><strong>Keynote:</strong> "Distributed computing on bittide systems"<br><em>Speaker: Prof. Sanjay Lall, Stanford University</em></td>
+                    </tr>
+                    <tr>
+                        <td class="time-col">10:30 - 11:00</td>
+                        <td colspan="4" class="break-row">Coffee Break</td>
+                    </tr>
+                    <tr>
+                        <td class="time-col">11:00 - 12:30</td>
+                        <td class="session-title">MEMOCODE - Regular session 1<br>(Contract based design/reasoning)</td>
+                        <td class="session-title">RSP</td>
+                        <td class="session-title">TCRS</td>
+                        <td class="session-title">MSC</td>
+                    </tr>
+                    <tr>
+                        <td class="time-col">11:00 - 11:30</td>
+                        <td>
+                            <div class="paper-title">Contract-based Component Selection Using Behaviors</div>
+                            <div class="authors">Sheng-Jung Yu, Alberto Sangiovanni-Vincentelli</div>
+                        </td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td class="time-col">11:30 - 12:00</td>
+                        <td>
+                            <div class="paper-title">Ensuring Strong Replaceability of Assume-guarantee Contract for Feedback Composition</div>
+                            <div class="authors">Sheng-Jung Yu, Alberto Sangiovanni-Vincentelli</div>
+                        </td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td class="time-col">12:00 - 12:20</td>
+                        <td>
+                            <div class="paper-title">Work-in-Progress: Formal Analysis of Fault Propagation in Complex Digital Systems</div>
+                            <div class="authors">Damiano Zuccala, Mohammad Reza Heidari Iman, Katell Morin-Allory, Samuel Hon, Jean-Marc Daveau, Philippe Roche</div>
+                        </td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td class="time-col">12:30 - 13:30</td>
+                        <td colspan="4" class="break-row">Lunch Break</td>
+                    </tr>
+                    <tr>
+                        <td class="time-col">13:30 - 15:00</td>
+                        <td class="session-title">MEMOCODE - Regular session 2<br>(Timed systems, Task graph modeling,...)</td>
+                        <td class="session-title">RSP</td>
+                        <td class="session-title">TCRS</td>
+                        <td class="session-title">MSC</td>
+                    </tr>
+                    <tr>
+                        <td class="time-col">13:30 - 14:00</td>
+                        <td>
+                            <div class="paper-title">Optimal Real-time Inter-zone Message Communication via Ethernet Backbone in Software Defined Vehicles</div>
+                            <div class="authors">Ram Mohan Chowdary Kota, Ashiqur Rahaman Molla, Jaishree Mayank, Arnab Sarkar, Arijit Mondal, Soumyajit Dey</div>
+                        </td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td class="time-col">14:00 - 14:30</td>
+                        <td>
+                            <div class="paper-title">Coherence-Aware Task Graph Modeling for Realistic Application</div>
+                            <div class="authors">Guochu Xiong, Xiangzhong Luo, Weichen Liu</div>
+                        </td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td class="time-col">14:30 - 14:50</td>
+                        <td>
+                            <div class="paper-title">Work-in-Progress: Optimising the Scheduling of System Level Logical Execution Time Systems</div>
+                            <div class="authors">Jamie Lee, Nathan Allen, Matthew M. Y. Kuo, Eugene Yip</div>
+                        </td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td class="time-col">15:00 - 15:30</td>
+                        <td colspan="4" class="break-row">Coffee Break</td>
+                    </tr>
+                    <tr>
+                        <td class="time-col">15:30 - 17:00</td>
+                        <td class="session-title">MEMOCODE - Regular session 3<br>(Learning based systems)</td>
+                        <td class="session-title">RSP</td>
+                        <td class="session-title">TCRS</td>
+                        <td class="session-title">MSC</td>
+                    </tr>
+                    <tr>
+                        <td class="time-col">15:30 - 16:00</td>
+                        <td>
+                            <div class="paper-title">Compositional training for Safe AI-based Cyber-Physical Systems</div>
+                            <div class="authors">Sobhan Chatterjee, Saumya Shankar, Partha Roop</div>
+                        </td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td class="time-col">16:00 - 16:20</td>
+                        <td>
+                            <div class="paper-title">Work-in-Progress: Hyperproperty-Constrained Secure Reinforcement Learning</div>
+                            <div class="authors">Ernest Bonnah, Luan Nguyen, Khaza Anuarul Hoque</div>
+                        </td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td class="time-col">16:20 - 17:00</td>
+                        <td><strong>Interaction/Discussion</strong></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                </tbody>
+            </table>
+            
+            <!-- Friday, October 3 -->
+            <table class="program-table">
+                <thead>
+                    <tr>
+                        <th colspan="3" class="day-header">Friday, October 3</th>
+                    </tr>
+                    <tr>
+                        <th class="time-col">Time</th>
+                        <th class="track-header">101A</th>
+                        <th class="track-header">101B</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="time-col">09:00 - 10:15</td>
+                        <td colspan="2" class="session-title"><strong>Keynote:</strong> Formal Design of Safety-critical Embedded Systems<br><em>Speaker: Prof. Naijun Zhan, Peking University</em></td>
+                    </tr>
+                    <tr>
+                        <td class="time-col">10:30 - 11:00</td>
+                        <td colspan="2" class="break-row">Coffee Break</td>
+                    </tr>
+                    <tr>
+                        <td class="time-col">11:00 - 12:30</td>
+                        <td class="session-title">MEMOCODE Regular session 4<br>(Invited Papers)</td>
+                        <td class="session-title">101B</td>
+                    </tr>
+                    <tr>
+                        <td class="time-col">11:00 - 11:30</td>
+                        <td>
+                            <div class="paper-title">Formal Methods for Cryogenic Cyber Physical Systems (CCPS)</div>
+                            <div class="authors">Duleepa Thrimawithana, Partha Roop, Sobhan Chatterjee, Maryam Hemmati</div>
+                        </td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td class="time-col">11:30 - 12:00</td>
+                        <td>
+                            <div class="paper-title">Time Aware Compilation Verified: A Category-Theoretic Approach in Rocq</div>
+                            <div class="authors">Benjamin Lion, David Nowak</div>
+                        </td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td class="time-col">12:00 - 12:30</td>
+                        <td>
+                            <div class="paper-title">Tuning into my heart through wearables: Towards a novel formal cardiac digital twin</div>
+                            <div class="authors">Partha Roop, Nathan Allen, Shahab Kazemi</div>
+                        </td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td class="time-col">12:30 - 13:30</td>
+                        <td colspan="2" class="break-row">Lunch Break</td>
+                    </tr>
+                    <tr>
+                        <td class="time-col">13:30 - 15:00</td>
+                        <td class="session-title">MEMOCODE Regular session 5<br>(Embedded and CPS, Security)</td>
+                        <td class="session-title">101B</td>
+                    </tr>
+                    <tr>
+                        <td class="time-col">13:30 - 14:00</td>
+                        <td>
+                            <div class="paper-title">Mitigation of Cyber-physical Attacks in Industry 4.0 using Secure Function Blocks</div>
+                            <div class="authors">Steph Wu, Alex Baird, Partha Roop, Nathan Allen, Hammond Pearce</div>
+                        </td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td class="time-col">14:00 - 14:20</td>
+                        <td>
+                            <div class="paper-title">Work-in-Progress: Efficient compilation and execution of synchronous programs via type-state programming</div>
+                            <div class="authors">Avinash Malik</div>
+                        </td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td class="time-col">14:20 - 14:40</td>
+                        <td>
+                            <div class="paper-title">Work-in-Progress: Automated Power Domain Insertion and Control in Dataflow Circuits</div>
+                            <div class="authors">Martha Barker, Stephen A. Edwards, Martha Kim, Mark Santolucito</div>
+                        </td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td class="time-col">14:40 - 15:00</td>
+                        <td class="session-title"><strong>Closing remarks</strong><br><em>Prof. Nan Guan, City University of Hong Kong</em></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td class="time-col">15:00 - 15:30</td>
+                        <td colspan="2" class="break-row">Coffee Break</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
     </div>
-
 </div>
-<script type="text/javascript" src="./program_files/MathJax.js"></script>
-<script id="texAllTheThingsPageScript" type="text/javascript"
-        src="chrome-extension://cbimabofgmfdkicghcadidpemeenbffn/js/pageScript.js"
-        inlinemath="[[&quot;$&quot;,&quot;$&quot;],[&quot;[;&quot;,&quot;;]&quot;]]"
-        displaymath="[[&quot;$$&quot;,&quot;$$&quot;],[&quot;\\[&quot;,&quot;\\]&quot;]]"
-        skiptags="[&quot;script&quot;,&quot;noscript&quot;,&quot;style&quot;,&quot;textarea&quot;,&quot;pre&quot;,&quot;code&quot;]"
-        ignoreclass="false" processclass="false"></script>
 </body>
-<span style="--colorTabBar:var(--colorAccentBg); --colorFg:#dbdbdb; --colorFgAlpha:#dbdbdb1a; --colorFgIntense:#ffffff; --colorFgFaded:#d0d0d0; --colorFgFadedMore:#c5c5c5; --colorFgFadedMost:#acacac; --colorBg:#2f2f2f; --colorBgAlpha:#2f2f2fe6; --colorBgAlphaHeavy:#2f2f2fa6; --colorBgAlphaHeavier:#2f2f2f40; --colorBgAlphaBlur:#2f2f2fbf; --colorBgDark:#292929; --colorBgDarker:#242424; --colorBgLight:#333333; --colorBgLighter:#434343; --colorBgLightIntense:#373737; --colorBgIntense:#242424; --colorBgIntenser:#1c1c1c; --colorBgIntserAlpha:#191919eb; --colorBgInverse:#333333; --colorBgInverser:#3f3f3f; --colorBgFaded:#3b3b3b; --colorHighlightBg:#579c8e; --colorHighlightBgUnfocused:#454545; --colorHighlightBgAlpha:#579c8e1a; --colorHighlightBgDark:#3f8477; --colorHighlightFg:#ffffff; --colorHighlightFgAlpha:#ffffff80; --colorHighlightFgAlphaHeavy:#ffffff40; --colorAccentBg:#404040; --colorAccentBgAlpha:#74747466; --colorAccentBgAlphaHeavy:#74747440; --colorAccentBgDark:#303030; --colorAccentBgDarker:#1a1a1a; --colorAccentBgFaded:#343434; --colorAccentBgFadedMore:#555555; --colorAccentBgFadedMost:#747474; --colorAccentBorder:#383838; --colorAccentBorderDark:#2e2e2e; --colorAccentFg:#ffffff; --colorAccentFgFaded:#cacaca; --colorAccentFgAlpha:#ffffff40; --colorBorder:#1c1c1c; --colorBorderDisabled:#242424; --colorBorderSubtle:#222222; --colorBorderIntense:#0c0c0c; --colorSuccessBg:#06a700; --colorSuccessBgAlpha:#06a7001a; --colorSuccessFg:#ffffff; --colorWarningBg:#efaf00; --colorWarningBgAlpha:#efaf001a; --colorWarningFg:#000000; --colorErrorBg:#c64539; --colorErrorBgAlpha:#c645391a; --colorErrorFg:#ffffff; --colorWindowBg:#1d1e21; --colorWindowFg:#ffffff; --radiusRound:100px; --radiusRounded:2px; --radiusRoundedLess:2px; --radius:4px; --radiusHalf:2px; --scrollbarWidth:12px;"></span>
-<grammarly-desktop-integration data-grammarly-shadow-root="true"></grammarly-desktop-integration>
 </html>
